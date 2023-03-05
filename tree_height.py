@@ -21,22 +21,9 @@ def compute_height(n, parents):
 
 
 def main():
-    type = input()
-    if type == "I":
-        n = input()
-        parentstr = input()
-    else:
-        filename = input()
-        input()
-        file = "test/"+filename
-        if "a" in file:
-            return
-        with open(file, "r") as fr:
-            lines = fr.readlines()
-            n = lines[0]
-            parentstr = lines[1]
-    parents = parentstr.split()
-    print(compute_height(parents))
+    print(input())
+    print(input())
+    print(input())
 
     # implement input form keyboard and from files
     

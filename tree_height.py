@@ -15,8 +15,8 @@ def main():
     type = input()
     if type.__contains__("I"):
         n = int(input())
-        a=input()
-        b=input()
+        parents = numpy.array(list((map(int, input().strip().split()))))[:n]
+        print(parents)
 
     # implement input form keyboard and from files
     
@@ -26,7 +26,6 @@ def main():
     # input number of elements
     # input values in one variable, separate with space, split these values in an array
     # call the function and output it's result
-    pass
 
 # In Python, the default limit on recursion depth is rather low,
 # so raise it here for this problem. Note that to take advantage

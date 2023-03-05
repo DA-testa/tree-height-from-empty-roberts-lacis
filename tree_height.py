@@ -16,6 +16,8 @@ def compute_height(n, parents):
             while a != -1:
                 count += 1
                 a = parents[a]
+            if max < count:
+                max = count
     return max
 
 

@@ -13,9 +13,9 @@ def compute_height(n, parents):
         level = []
         for elem in parents:
             if eval(elem) == i:
-                level.add(elem)
+                level.append(elem)
         if len(level) > 0:
-            levels.add(level)
+            levels.append(level)
         i=i+1
     return len(levels)
 

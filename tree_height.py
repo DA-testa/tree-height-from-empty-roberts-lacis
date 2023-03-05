@@ -13,7 +13,7 @@ def compute_height(n, parents):
 
 def main():
     type = input()
-    if type == "I":
+    if type.__contains__("I"):
         n = int(input())
         parents = numpy.array(list((map(int, input().strip().split()))))[:n]
         print(parents)

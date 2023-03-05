@@ -27,6 +27,7 @@ def main():
         parentstr = input()
     else:
         filename = input()
+        input()
         file = "test/"+filename
         if "a" in file:
             return

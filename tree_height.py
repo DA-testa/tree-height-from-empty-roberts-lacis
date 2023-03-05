@@ -15,8 +15,7 @@ def main():
     type = input()
     if type == "I":
         n = int(input())
-        parentstr = input()
-        parents = parentstr.split()
+        parents = numpy.array(list((map(int, input().strip().split()))))[:n]
         print(parents)
 
     # implement input form keyboard and from files

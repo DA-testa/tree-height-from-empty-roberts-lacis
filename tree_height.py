@@ -29,7 +29,7 @@ def main():
         file = input()
         if "a" in file:
             return
-        with open("test/"+file) as filereader:
+        with open("test/"+file, "r") as filereader:
             lines = filereader.readlines()
             n = lines[0]
             parentstr = lines[1]

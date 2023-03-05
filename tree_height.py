@@ -8,15 +8,6 @@ import numpy
 def compute_height(n, parents):
     max_height = 0
     levels = []
-    i=-1
-    while(i<eval(n)):
-        level = []
-        for elem in parents:
-            if eval(elem) == i:
-                level.append(elem)
-        if len(level) > 0:
-            levels.append(level)
-        i=i+1
     return len(levels)
 
 
@@ -26,7 +17,7 @@ def main():
         n = input()
         parentstr = input()
     else:
-        filename = input()
+        filename = input().rstrip()
         file = "test/"+filename
         if "a" in file:
             return

@@ -25,8 +25,6 @@ def main():
     print(a)
     a = input()
     print(a)
-    a = input()
-    print(a)
 
     # implement input form keyboard and from files
     

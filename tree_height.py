@@ -15,6 +15,8 @@ def main():
     type = input()
     if type.__contains__("I"):
         n = int(input())
+        a=input()
+        b=input()
 
     # implement input form keyboard and from files
     

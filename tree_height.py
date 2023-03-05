@@ -15,7 +15,6 @@ def main():
     type = input()
     if type == "I":
         n = input()
-        parentstr = input()
     else:
         filename = input().rstrip()
         file = "test/"+filename

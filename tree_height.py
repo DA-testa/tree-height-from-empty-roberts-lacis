@@ -21,9 +21,12 @@ def compute_height(n, parents):
 
 
 def main():
-    print(input())
-    print(input())
-    print(input())
+    a = input()
+    print(a)
+    a = input()
+    print(a)
+    a = input()
+    print(a)
 
     # implement input form keyboard and from files
     

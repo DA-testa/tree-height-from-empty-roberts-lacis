@@ -6,13 +6,36 @@ import numpy
 
 
 def compute_height(n, parents):
-    # Write this function
     max_height = 0
-    # Your code here
-    return max_height
+    levels = []
+    i=-1
+    while(i<eval(n)):
+        level = []
+        for elem in parents:
+            if eval(elem) == i:
+                level.add(elem)
+        if len(level) > 0:
+            levels.add(level)
+        i=i+1
+    return len(levels)
 
 
 def main():
+    type = input()
+    if type == "I":
+        n = input()
+        parentstr = input()
+    else:
+        file = input()
+        if "a" in file:
+            return
+        with open("test/"+file) as filereader:
+            lines = filereader.readlines()
+            n = lines[0]
+            parentstr = lines[1]
+    parents = parentstr.split()
+    print(compute_height(parents))
+
     # implement input form keyboard and from files
     
     # let user input file name to use, don't allow file names with letter a

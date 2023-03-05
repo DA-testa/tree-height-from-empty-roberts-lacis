@@ -26,7 +26,8 @@ def main():
         n = input()
         parentstr = input()
     else:
-        file = "test/"+input()
+        filename = input()
+        file = "test/"+filename
         if "a" in file:
             return
         with open(file, "r") as filereader:

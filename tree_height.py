@@ -17,7 +17,6 @@ def main():
         n = int(input())
         parents = numpy.array(list((map(int, input().strip().split()))))[:n]
         print(parents)
-        
     else:
         file = "test/" + input()
         if "a" in file:
@@ -26,7 +25,7 @@ def main():
             n = int(fr.readline())
             parents = numpy.array(list((map(int, fr.readline().strip().split()))))[:n]
             print(parents)
-
+    pass
     # implement input form keyboard and from files
     
     # let user input file name to use, don't allow file names with letter a

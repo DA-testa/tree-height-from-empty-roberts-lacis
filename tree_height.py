@@ -12,20 +12,23 @@ def compute_height(n, parents):
 
 
 def main():
-    type = input()
-    if type.__contains__("I"):
-        n = int(input())
-        parents = numpy.array(list((map(int, input().strip().split()))))[:n]
-        print(parents)
-    else:
-        file = "test/" + input()
-        if "a" in file:
-            return
-        with open(file,"r") as fr:
-            n = int(fr.readline())
-            parents = numpy.array(list((map(int, fr.readline().strip().split()))))[:n]
+    try:
+        type = input()
+        if type.__contains__("I"):
+            n = int(input())
+            parents = numpy.array(list((map(int, input().strip().split()))))[:n]
             print(parents)
-    pass
+        else:
+            file = "test/" + input()
+            if "a" in file:
+                return
+            with open(file,"r") as fr:
+                n = int(fr.readline())
+                parents = numpy.array(list((map(int, fr.readline().strip().split()))))[:n]
+                print(parents)
+    except EOFError as e:
+        pass
+
     # implement input form keyboard and from files
     
     # let user input file name to use, don't allow file names with letter a

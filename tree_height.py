@@ -35,7 +35,7 @@ def main():
             n = lines[0]
             parentstr = lines[1]
     parents = parentstr.split()
-    print(compute_height(parents))
+    print(compute_height(n, parents))
 
     # implement input form keyboard and from files
     

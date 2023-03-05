@@ -2,47 +2,46 @@
 
 import sys
 import threading
-import numpy
+import numpy as np
 
 
-def compute_height(n, parents):
-    max_height = 0
-    levels = []
-    return len(levels)
+def compute_height(elements, parents):
+    apmeklets = np.zeros([elements], dtype=np.int32)
+    max_height_arr = np.zeros([elements], dtype=np.int32)
+
+    for i in range(elements):
+        if apmeklets[i]==0:
+            node = i
+            reizes = 0
+            while node != -1:
+               apmeklets[node] = 1 
+               reizes = reizes + 1
+               max_height_arr[i] = reizes
+               node = parents[node]
+    
+    return max(max_height_arr)
 
 
 def main():
-    type = input()
-    if type == "I":
-        n = input()
-        parents = numpy.array(list((map(int, input().strip().split()))))[:n]
-    else:
-        filename = input().rstrip()
-        file = "test/"+filename
-        if "a" in file:
-            return
-        with open(file, "r") as fr:
-            lines = fr.readlines()
-            n = lines[0]
-            parentstr = lines[1]
-    #parents = parentstr.split()
-    #print(compute_height(n, parents))
-
-    # implement input form keyboard and from files
-    
-    # let user input file name to use, don't allow file names with letter a
-    # account for github input inprecision
-    
-    # input number of elements
-    # input values in one variable, separate with space, split these values in an array
-    # call the function and output it's result
-    pass
-
-# In Python, the default limit on recursion depth is rather low,
-# so raise it here for this problem. Note that to take advantage
-# of bigger stack, we have to launch the computation in a new thread.
-sys.setrecursionlimit(10**7)  # max depth of recursion
-threading.stack_size(2**27)   # new thread will get stack of such size
+    tekstaievade = input()
+    if tekstaievade.__contains__("I"):
+        elements = int(input())
+        parents = np.array(list((map(int, input().strip().split()))))[:elements]
+        height = compute_height(elements, parents)
+        print(height)
+        
+    elif tekstaievade.__contains__("F"):
+        nos = input()
+        if "a" not in nos:
+            fails = "test/" + nos
+            with open(fails,"r") as f:
+                elements = int(f.readline())
+                parents = np.array(list((map(int, f.readline().strip().split()))))[:elements]
+                height = compute_height(elements, parents)
+                print(height)
+   
+sys.setrecursionlimit(10**7) 
+threading.stack_size(2**27)   
 threading.Thread(target=main).start()
-main()
+# main()
 # print(numpy.array([1,2,3]))

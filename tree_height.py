@@ -14,7 +14,7 @@ def compute_height(n, parents):
 def main():
     type = input()
     if type == "I":
-        n = int(input)
+        n = int(input())
         parentstr = input()
         parents = parentstr.split()
         print(parents)

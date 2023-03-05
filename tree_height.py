@@ -25,7 +25,7 @@ def main():
         if type.__contains__("I"):
             n = int(input())
             parents = numpy.array(list((map(int, input().strip().split()))))
-            print(parents)
+            print(compute_height(parents))
         else:
             file = "test/" + input()
             if "a" in file:
@@ -33,7 +33,7 @@ def main():
             with open(file,"r") as fr:
                 n = int(fr.readline())
                 parents = numpy.array(list((map(int, fr.readline().strip().split()))))
-                print(parents)
+                print(compute_height(parents))
     except EOFError as e:
         pass
     # implement input form keyboard and from files

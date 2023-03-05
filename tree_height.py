@@ -30,8 +30,8 @@ def main():
         file = "test/"+filename
         if "a" in file:
             return
-        with open(file, "r") as filereader:
-            lines = filereader.readlines()
+        with open(file, "r") as fr:
+            lines = fr.readlines()
             n = lines[0]
             parentstr = lines[1]
     parents = parentstr.split()

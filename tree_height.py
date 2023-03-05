@@ -18,15 +18,7 @@ def main():
         parentstr = input()
     else:
         filename = input()
-        file = "test/"+filename
-        if "a" in file:
-            return
-        with open(file, "r") as fr:
-            lines = fr.readlines()
-            n = lines[0]
-            parentstr = lines[1]
-    parents = parentstr.split()
-    print(compute_height(n, parents))
+        print(filename)
 
     # implement input form keyboard and from files
     

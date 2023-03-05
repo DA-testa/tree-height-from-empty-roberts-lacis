@@ -15,6 +15,7 @@ def compute_height(n, parents):
             count = 0
             while a != -1:
                 count += 1
+                searched[a] = 1
                 a = parents[a]
             if max < count:
                 max = count

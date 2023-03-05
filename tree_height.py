@@ -6,8 +6,17 @@ import numpy
 
 
 def compute_height(n, parents):
-    
-    return 0
+    searched = numpy.zeros(n)
+    max = 0
+
+    for i in range(n):
+        if searched[i] == 0:
+            a = i
+            count = 0
+            while a != -1:
+                count += 1
+                a = parents[a]
+    return max
 
 
 def main():

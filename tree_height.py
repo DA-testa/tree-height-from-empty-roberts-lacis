@@ -16,8 +16,8 @@ def main():
     if type == "I":
         n = int(input)
         parentstr = input()
-    parents = parentstr.split()
-    print(parents)
+        parents = parentstr.split()
+        print(parents)
 
     # implement input form keyboard and from files
     

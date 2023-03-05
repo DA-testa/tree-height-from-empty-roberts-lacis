@@ -15,6 +15,7 @@ def main():
     type = input()
     if type == "I":
         n = input()
+        parents = numpy.array(list((map(int, input().strip().split()))))[:n]
     else:
         filename = input().rstrip()
         file = "test/"+filename
@@ -24,8 +25,8 @@ def main():
             lines = fr.readlines()
             n = lines[0]
             parentstr = lines[1]
-    parents = parentstr.split()
-    print(compute_height(n, parents))
+    #parents = parentstr.split()
+    #print(compute_height(n, parents))
 
     # implement input form keyboard and from files
     

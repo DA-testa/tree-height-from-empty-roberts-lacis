@@ -26,10 +26,10 @@ def main():
         n = input()
         parentstr = input()
     else:
-        file = input()
+        file = "test/"+input()
         if "a" in file:
             return
-        with open("test/"+file, "r") as filereader:
+        with open(file, "r") as filereader:
             lines = filereader.readlines()
             n = lines[0]
             parentstr = lines[1]

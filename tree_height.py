@@ -17,7 +17,7 @@ def main():
         n = input()
         parentstr = input()
     else:
-        filename = input().rstrip()
+        filename = input()
         file = "test/"+filename
         if "a" in file:
             return
